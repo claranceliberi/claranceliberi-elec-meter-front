@@ -5,11 +5,14 @@
 </script>
 
 <template>
-    <form>
-        <label for="token">
-            <span>token</span>
-            <input v-model="token" type="text" id="token">
+    <form class=" mt-6">
+        <label for="token" class="flex flex-col w-60">
+            <span class="capitalize mb-2 font-bold">token</span>
+            <div class="flex items-center">
+                <input placeholder="Enter your token here" v-model="token" type="text" class="bg-gray-100 outline-none py-2 px-4" id="token">
+            <button type="submit" class="ml-4 py-2 px-6 bg-blue-600 rounded text-white shadow-lg shadow-blue-600/50 hover:bg-blue-500">Load</button>
+            </div>
         </label>
-        <button type="submit">Load</button>
+        
     </form>
 </template>
