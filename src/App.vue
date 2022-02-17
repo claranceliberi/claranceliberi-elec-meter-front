@@ -9,11 +9,12 @@
 </script>
 
 <template>
-  <div class="menu">
-    <ul>
-      <li @click="tab = 1">Info</li>
-      <li @click="tab = 2">Load</li>
-      <li @click="tab = 3">Buy</li>
+  <div class="ml-6 text-gray-700">
+    <div class="menu">
+    <ul class="flex mt-6">
+      <li @click="tab = 1" class="py-2 px-10 bg-gray-100 hover:bg-gray-200 cursor-pointer" :class="`${tab === 1 ? 'bg-gray-300 hover:bg-gray-300 border-gray-400 border-2' : ''}`">Info</li>
+      <li @click="tab = 2" class="py-2 px-10 bg-gray-100 hover:bg-gray-200 cursor-pointer" :class="`${tab === 2 ? 'bg-gray-300 hover:bg-gray-300 border-gray-400 border-2' : ''}`">Load</li>
+      <li @click="tab = 3" class="py-2 px-10 bg-gray-100 hover:bg-gray-200 cursor-pointer" :class="`${tab === 3 ? 'bg-gray-300 hover:bg-gray-300 border-gray-400 border-2' : ''}`">Buy</li>
     </ul>
   </div>
   <div class="tabs">
@@ -24,6 +25,7 @@
     <div class="info" v-else>
       <TokenInfo />
     </div>
+  </div>
   </div>
 </template>
 
